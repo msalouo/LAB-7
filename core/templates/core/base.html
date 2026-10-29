@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}ComunidadConecta{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'core/css/estilo.css' %}">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top navbar-cc">
+
+        <a class="navbar-brand" href="{% url 'inicio' %}">
+            ComunidadConecta
+        </a>
+
+        <button class="navbar-toggler" type="button" 
+        data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav">
+                <li class="nav-item"> <a class="nav-link" href="{% url 'inicio' %}"> INICIO</a>
+                </li>
+
+                <li class="nav-item"> <a class="nav-link" href="{% url 'registrar' %}"> REGISTRAR CORRESPONDENCIA</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        {% block contenido %}
+        {% endblock %}
+    </main>
+
+    <script src="{% static 'CORE/js/bootstrap.bundle.min.js' %}"></script>
+
+    </nav>
+
+</body>
+</html>

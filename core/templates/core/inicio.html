@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ComunidadConecta</title>
+    <link rel="stylesheet" href="{static 'core/estilo.css'}">
+</head>
+<body>
+
+    {% extends 'core/base.html' %}
+
+    {% block contenido %}
+
+    <section class="bienvenida">
+        <h2>Consulta tus correspondencias</h2>
+
+        <p>
+            Ingresa tu número de residencia para consultar el estado de tus envíos.
+        </p>
+
+    </section>
+
+    <form method="GET" action="{% url 'inicio'}">
+        <label for="residencia">
+            Número de residencia
+        </label>
+
+        <div class="buscador">
+            <input 
+                type="number" 
+                name="residencia" 
+                id="residencia"
+                placeholder="Ejemplo: 504"
+                min="1"
+                required>
+        </div>
+
+        <button type="submit">
+            Buscar
+        </button>
+    </form>
+
+    
+
+
+
+    {% endblock %}
+</body>
+</html>

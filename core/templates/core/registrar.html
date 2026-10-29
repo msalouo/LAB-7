@@ -1,0 +1,61 @@
+
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+
+<h2>Registrar correspondencia</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <label for="residencia">
+        Número de residencia
+    </label>
+
+    <div class="buscador">
+        <input
+            type="number"
+            name="residencia"
+            id="residencia"
+            placeholder="Ejemplo: 504"
+            min="1"
+            required>
+    </div>
+
+    <label for="tipo">
+        Tipo de correspondencia
+    </label>
+
+    <select
+        class="form-select"
+        id="tipo"
+        name="tipo"
+        required>
+
+        <option value="" selected disabled>
+            Selecciona un tipo
+        </option>
+
+        <option value="carta">CARTA</option>
+        <option value="encomienda">ENCOMIENDA</option>
+        <option value="delivery">DELIVERY</option>
+    </select>
+
+    <label for="comentarios" class="form-label">
+        Comentarios adicionales
+    </label>
+
+    <textarea
+        class="form-control"
+        id="comentarios"
+        name="descripcion"
+        rows="5"
+        placeholder="Comentarios adicionales"></textarea>
+
+    <button type="submit">
+        Registrar correspondencia
+    </button>
+
+</form>
+
+{% endblock %}

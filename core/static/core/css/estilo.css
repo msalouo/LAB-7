@@ -1,0 +1,18 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.navbar-cc{
+    background-color: #142D4E;
+    padding: 15px 0;
+}
+
+.navbar-infjmc .nav-link{
+    color: white;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-infjmc .nav-link:hover{
+    color: #8FCBFF;
+}
